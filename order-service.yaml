@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: orders
+  labels:
+    name: orders
+    app: orders
+spec:
+  selector:
+    name: orders 
+  type: NodePort
+  ports:
+   - name: http
+     port: 4747
+     targetPort: 4747
+     protocol: TCP
